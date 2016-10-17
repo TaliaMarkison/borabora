@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+				<style>
+	body {
+		background-color : lightskyblue ;
+		}
+	h1 {
+		color : black;
+		}
+				ol{
+			font-size: 125%;
+		
+		
+		
+		
+		
+		#main {
+				margin-left : auto;
+				margin-right : auto;
+				width: 800px
+				border : 1px solid black;
+			}
+			
+			.steelblue-text {
+				color: steelblue;
+				}
+	</style>
+	</head>
+<body>
+<h1>Bora Bora
+</h1>
+<img src="Pano_bora-bora-07.jpg" width="1000">
+<p>
+Bora Bora is a tropical paradise with lush tropical slopes, valleys, and hills. White-sand
+ beaches extenuate the bright blue sparkling waters where colored fish of all sorts live in
+the coral gardens.
+
+</p>
+<div id="map" style="width:50%;height:400px"></div>
+<div id="map2" style="width:50%;height:400px"></div>
+<p>Bora Bora is a tiny litte island located in the South Pacific Ocean. It is near other 
+islands like the French Polynesia and Tahaa.
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qA88oXjx2Ys" frameborder="0" allowfullscreen></iframe>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Bora_Bora">https://en.wikipedia.org/wiki/Bora_Bora</a>
+<a href="https://www.google.com/maps/place/Bora+Bora/@-16.5044211,-151.7736686,13z/data=!3m1!4b1!4m5!3m4!1s0x76bdbd188a4a98ab:0x160a089e92d5ce61!8m2!3d-16.5004126!4d-151.7414904">https://www.google.com/maps/place/Bora+Bora/@-16.5044211,-151.7736686,13z/data=!3m1!4b1!4m5!3m4!1s0x76bdbd188a4a98ab:0x160a089e92d5ce61!8m2!3d-16.5004126!4d-151.7414904</a>
+<a href="https://www.youtube.com/watch?v=qA88oXjx2Ys">https://www.youtube.com/watch?v=qA88oXjx2Ys</a>
+</p>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(-16.507339,-151.7950127);
+
+  var mapCanvas = document.getElementById("map");//stores the link to the div that the map will go in
+  var mapOptions = {
+     center: myCenter, 
+     zoom: 11,
+     mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+  var origin = new google.maps.LatLng(0,0);
+  var marker2 = new google.maps.Marker({position:origin});
+  marker2.setMap(map);
+
+  
+
+  var map2Canvas = document.getElementById("map2");//stores the link to the div that the map will go in
+  var map2Options = {
+     center: myCenter, 
+     zoom: 11,
+    mapTypeId:google.maps.MapTypeId.SATELLITE
+  };
+  var map2 = new google.maps.Map(map2Canvas, map2Options);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map2);
+  var origin = new google.maps.LatLng(0,0);
+  var marker2 = new google.maps.Marker({position:origin});
+  marker2.setMap(map2);}
+  
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</body>
+</html>
